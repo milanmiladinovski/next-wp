@@ -26,14 +26,14 @@ export async function PostCard({ post }: { post: Post }) {
 
   return (
     <Link
-      href={`/posts/${post.slug}`}
+      href={`/${post.slug}`}
       className={cn(
-        "border p-4 bg-accent/30 rounded-lg group flex justify-between flex-col not-prose gap-8",
+        "border bg-accent/30 rounded-lg group flex justify-between flex-col not-prose gap-8",
         "hover:bg-accent/75 transition-all"
       )}
     >
       <div className="flex flex-col gap-4">
-        <div className="h-48 w-full overflow-hidden relative rounded-md border flex items-center justify-center bg-muted">
+        <div className="h-64 w-full overflow-hidden relative rounded-md border flex items-center justify-center bg-muted">
           {media?.source_url ? (
             <Image
               className="h-full w-full object-cover"
@@ -52,10 +52,10 @@ export async function PostCard({ post }: { post: Post }) {
           dangerouslySetInnerHTML={{
             __html: post.title?.rendered || "Untitled Post",
           }}
-          className="text-xl text-primary font-medium group-hover:underline decoration-muted-foreground underline-offset-4 decoration-dotted transition-all"
+          className="px-3 text-xl text-primary font-medium group-hover:underline decoration-muted-foreground underline-offset-4 decoration-dotted transition-all"
         ></div>
         <div
-          className="text-sm"
+          className="text-sm px-3"
           dangerouslySetInnerHTML={{
             __html: post.excerpt?.rendered
               ? post.excerpt.rendered.split(" ").slice(0, 12).join(" ").trim() +
@@ -65,7 +65,7 @@ export async function PostCard({ post }: { post: Post }) {
         ></div>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 p-3">
         <hr />
         <div className="flex justify-between items-center text-xs">
           <p>{category?.name || "Uncategorized"}</p>

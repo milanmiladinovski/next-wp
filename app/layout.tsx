@@ -76,7 +76,6 @@ const Nav = ({ className, children, id }: NavProps) => {
             src={Logo}
             alt="Logo"
             loading="eager"
-            className="dark:invert"
             width={42}
             height={26.44}
           ></Image>
@@ -93,9 +92,6 @@ const Nav = ({ className, children, id }: NavProps) => {
               </Button>
             ))}
           </div>
-          <Button asChild className="hidden sm:flex">
-            <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
-          </Button>
           <MobileNav />
         </div>
       </div>
@@ -114,7 +110,6 @@ const Footer = () => {
               <Image
                 src={Logo}
                 alt="Logo"
-                className="dark:invert"
                 width={42}
                 height={26.44}
               ></Image>
@@ -151,7 +146,7 @@ const Footer = () => {
         <Container className="border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center">
           <ThemeToggle />
           <p className="text-muted-foreground">
-            &copy; <a href="https://9d8.dev">9d8</a>. All rights reserved.
+            All rights reserved.
             2025-present.
           </p>
         </Container>
