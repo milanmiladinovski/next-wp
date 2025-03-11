@@ -24,9 +24,9 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "WordPress & Next.js Starter by 9d8",
+  title: "Gardener Mania",
   description:
-    "A starter template for Next.js with WordPress as a headless CMS.",
+    "Explore your next gardening project",
   metadataBase: new URL(siteConfig.site_domain),
   alternates: {
     canonical: "/",
